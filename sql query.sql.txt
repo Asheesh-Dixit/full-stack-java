@@ -12,7 +12,7 @@ SELECT*FROM Student;
 --INSERT INTO Student VALUES(3,'raju','hindi');
 --INSERT INTO Student VALUES(4,'ramesh','gujrati');
 
---INSERT INTO Student VALUES(5,'priya','tamil');
+--INSERT INTO Student VALUES(5,'priya','tamil'); 
 
 -------------------------------------------------------------------------------
 CREATE TABLE Persons (
