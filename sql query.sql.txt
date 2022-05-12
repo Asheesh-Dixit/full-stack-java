@@ -1,0 +1,97 @@
+CREATE TABLE Student(
+Student_id INT,
+name VARCHAR(20),
+major VARCHAR(20),
+PRIMARY KEY(Student_id)
+);
+
+SELECT*FROM Student;
+--INSERT INTO Student VALUES(1,'sumant','biology');
+--INSERT INTO Student VALUES(2,'ram','math');
+
+--INSERT INTO Student VALUES(3,'raju','hindi');
+--INSERT INTO Student VALUES(4,'ramesh','gujrati');
+
+--INSERT INTO Student VALUES(5,'priya','tamil');
+
+-------------------------------------------------------------------------------
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CONSTRAINT PK_Person PRIMARY KEY (ID)
+);
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(ID)
+);
+
+
+--INSERT INTO persons VALUES(1,'Kumar','Mithilesh',20);
+--INSERT INTO persons VALUES(2,'Singh','Prakash',25);
+--INSERT INTO persons VALUES(3,'Dwivedi','Sumant',30);
+--INSERT INTO persons VALUES(4,'Prasad','Pawan',28);
+
+--INSERT INTO orders VALUES(1,100,1);
+--INSERT INTO orders VALUES(2,100,1);
+--INSERT INTO orders VALUES(3,200,2);
+--INSERT INTO orders VALUES(4,400,3);
+
+SELECT * FROM persons;
+SELECT * FROM orders;
+
+
+SELECT p.id,firstname, ordernumber from persons as p INNER JOIN orders as o on p.id=o.personid WHERE o.ordernumber='400';
+
+.....................................................................................
+
+
+CREATE TABLE person1(
+ID INT NOT NULL,
+LastName VARCHAR(250),
+FirstName VARCHAR(200),
+age int,
+mobilenumber VARCHAR(220)NOT NULL,
+Buildingnumber VARCHAR(200)NOT NULL,
+CONSTRAINT pk_person1 PRIMARY KEY(ID)
+);
+
+
+.........................................................................................
+
+
+CREATE TABLE order1(
+orderID int NOT NULL,
+orderNAME VARCHAR NOT NULL,
+personID int,
+PRIMARY KEY(orderID),
+FOREIGN KEY(personID)REFERENCES person1(ID)
+
+
+
+----------------------------------------------------------------------------
+
+
+CREATE TABLE employee (
+id Int PRIMARY KEY,
+NAME VARCHAR(200) NOT NULL,
+EmailID VARCHAR(200) NOT NULL,
+mobilenumber VARCHAR(150) NOT NULL,
+address VARCHAR(70)
+
+);
+---------------------------------------------------
+
+
+INSERT INTO employee VALUES(1,'mithlesh','mk@gmail.com','12345678','delhi');
+INSERT INTO employee VALUES(2,'sumant','tk@gmail.com','12345677','patna');
+INSERT INTO employee VALUES(3,'sonu','pk@gmail.com','12345676','gujrat');
+INSERT INTO employee VALUES(4,'vikash','ck@gmail.com','12345675','tamil');
+INSERT INTO employee VALUES(5,'raju','lk@gmail.com','12345674','punjabi');
+
+
